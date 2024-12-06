@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Customizer with Advanced Formatting</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="output-box">
+      <div class="swiper-container">
+        <div class="swiper">
+          <div class="swiper-wrapper" id="swiperWrapper"></div>
+          <div class="swiper-pagination"></div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui-box">
+      <textarea id="textInput" placeholder="Write something here..."></textarea>
+
+      <div class="controls">
+        <div class="formatting-controls">
+          <button id="boldBtn" class="formatting-button">B</button>
+          <button id="italicBtn" class="formatting-button">I</button>
+          <button id="underlineBtn" class="formatting-button">U</button>
+        </div>
+
+        <label>
+          Font:
+          <select id="fontSelector">
+            <option value="Arial">Arial</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Georgia">Georgia</option>
+          </select>
+        </label>
+        <label>
+          Alignment:
+          <select id="textAlignSelector">
+            <option value="center">Center</option>
+            <option value="left">Left</option>
+            <option value="right">Right</option>
+          </select>
+        </label>
+        <label>
+          Font Size:
+          <input type="number" id="fontSizeInput" min="10" max="100" value="24">
+        </label>
+        <label>
+          Line Height:
+          <input type="number" id="lineHeightInput" min="1" max="3" step="0.1" value="1.2">
+        </label>
+        <label>
+          Text Color:
+          <input type="color" id="textColorInput" value="#000000">
+        </label>
+      </div>
+
+      <div class="position-controls">
+        <div class="slider-container">
+          <label>Horizontal:</label>
+          <input type="range" id="horizontalSlider" min="0" max="100" value="50">
+          <span class="value-display" id="horizontalValue">50%</span>
+        </div>
+        <div class="slider-container">
+          <label>Vertical:</label>
+          <input type="range" id="verticalSlider" min="0" max="100" value="50">
+          <span class="value-display" id="verticalValue">50%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
